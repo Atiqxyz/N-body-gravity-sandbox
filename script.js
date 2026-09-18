@@ -370,4 +370,20 @@ function animate() {
         ctx.lineTo(currentMouse.x, currentMouse.y); 
         ctx.stroke();
 
-        let previewRadius =
+        let previewRadius = injectType === 'DARK_MATTER' ? 20 : (parseFloat(massNumber.value) >= 50000 ? Math.max(4, Math.cbrt(parseFloat(massNumber.value)) * 0.3) : Math.max(2, Math.cbrt(parseFloat(massNumber.value)) * 0.85));
+        ctx.beginPath(); 
+        ctx.arc(dragStart.x, dragStart.y, previewRadius, 0, Math.PI * 2);
+        ctx.fillStyle = injectType === 'DARK_MATTER' ? 'rgba(176, 38, 255, 0.2)' : (isOrbiting ? 'rgba(0, 255, 102, 0.3)' : 'rgba(0, 243, 255, 0.4)'); 
+        ctx.fill(); 
+        ctx.stroke();
+        ctx.restore();
+    }
+
+    if (supernovaFlash > 0) {
+        ctx.fillStyle = `rgba(255, 255, 255, ${supernovaFlash})`; ctx.fillRect(0, 0, canvas.width, canvas.height);
+        supernovaFlash -= 0.02;
+    }
+
+    requestAnimationFrame(animate);
+}
+animate();
