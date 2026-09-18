@@ -1,4 +1,3 @@
-test at : https://atiqxyz.github.io/N-body-gravity-sandbox
 
 N-Body Astrophysical Workstation (SYS-ID: 884-OMEGA v4.0)
 A high-performance, interactive 2D N-Body gravitational sandbox built with HTML5 Canvas and Vanilla JavaScript. Simulate complex orbital mechanics, cosmic collisions, relativistic phenomena, and spacetime distortions right in your browser.
@@ -22,4 +21,4 @@ Controls & Usage:
  * Dark Matter: Click DARK MATTER to spawn invisible gravitational anchors that warp spacetime and pull normal bodies without direct collisions.
  * Binary System: Click BINARY to instantly wipe the board and setup a balanced dual-star orbit.
  * Simulation Control: Use PAUSE to freeze time and analyze mechanics, or RESET to restart the default single-star system.
- * 
+
